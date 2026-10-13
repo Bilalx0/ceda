@@ -1,0 +1,36 @@
+name: 'CEDA - AI Code Debt Auditor'
+description: 'Automated AI code review that catches hallucinations, test cheating, and security leaks before code merges'
+author: 'Your Name'
+
+branding:
+  icon: 'shield'
+  color: 'blue'
+
+inputs:
+  github-token:
+    description: 'GitHub token for API access (automatically provided by GitHub Actions)'
+    required: true
+    default: ${{ github.token }}
+
+  llm-api-key:
+    description: 'API key for LLM provider (Anthropic or OpenAI)'
+    required: true
+
+  llm-provider:
+    description: 'LLM provider to use: anthropic or openai'
+    required: false
+    default: 'anthropic'
+
+  risk-threshold:
+    description: 'Minimum risk score (0-100) to post a comment'
+    required: false
+    default: '30'
+
+  verbose:
+    description: 'Enable verbose logging'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
