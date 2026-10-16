@@ -1,6 +1,7 @@
-export const id = 355;
-export const ids = [355];
-export const modules = {
+"use strict";
+exports.id = 355;
+exports.ids = [355];
+exports.modules = {
 
 /***/ 355:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -36,5 +37,5 @@ var node_path__WEBPACK_IMPORTED_MODULE_4___namespace_cache;
 /***/ })
 
 };
-
+;
 //# sourceMappingURL=355.index.js.map

@@ -32,7 +32,6 @@
     }
   },
   "packageManager": "pnpm@12.11.2",
-  "type": "module",
   "dependencies": {
     "@actions/core": "^3.0.1",
     "@actions/github": "^9.1.1",
