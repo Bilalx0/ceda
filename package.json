@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsup src/index.ts --format esm --dts --clean",
+    "build": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write \"src/**/*.ts\"",
@@ -47,6 +47,7 @@
     "@eslint/js": "^10.0.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.6.5",
+    "@vercel/ncc": "^0.45.0",
     "@vitest/coverage-v8": "^5.0.3",
     "eslint": "^10.12.0",
     "husky": "^9.1.7",
